@@ -2,8 +2,8 @@ const products = [
     {
         id: 1,
         name: 'Llamas and pinatas',
-        href: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-ymfjDY6yJN1DmvNeoUmMdcOH/user-bu0g53S9wFvMnD4a3DQnES6e/img-K6fVFxSdEAHkIt5aZvAvVzTx.png?st=2023-02-26T20%3A07%3A49Z&se=2023-02-26T22%3A07%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-26T15%3A32%3A59Z&ske=2023-02-27T15%3A32%3A59Z&sks=b&skv=2021-08-06&sig=XCGTyuo/Xw7oklhcMBupwoYrr4WP8F%2BLfUXulixHXBY%3D',
-        imageSrc: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-ymfjDY6yJN1DmvNeoUmMdcOH/user-bu0g53S9wFvMnD4a3DQnES6e/img-K6fVFxSdEAHkIt5aZvAvVzTx.png?st=2023-02-26T20%3A07%3A49Z&se=2023-02-26T22%3A07%3A49Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-26T15%3A32%3A59Z&ske=2023-02-27T15%3A32%3A59Z&sks=b&skv=2021-08-06&sig=XCGTyuo/Xw7oklhcMBupwoYrr4WP8F%2BLfUXulixHXBY%3D',
+        href: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-ymfjDY6yJN1DmvNeoUmMdcOH/user-bu0g53S9wFvMnD4a3DQnES6e/img-0ca1CfaJ3FUwvOII5e3FXxGf.png?st=2023-02-26T21%3A21%3A41Z&se=2023-02-26T23%3A21%3A41Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-26T11%3A08%3A53Z&ske=2023-02-27T11%3A08%3A53Z&sks=b&skv=2021-08-06&sig=LHTekv2yZ/s7ifgHIJLHvw5bHbPhgDNwhOXNAheXWww%3D',
+        imageSrc: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-ymfjDY6yJN1DmvNeoUmMdcOH/user-bu0g53S9wFvMnD4a3DQnES6e/img-0ca1CfaJ3FUwvOII5e3FXxGf.png?st=2023-02-26T21%3A21%3A41Z&se=2023-02-26T23%3A21%3A41Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-26T11%3A08%3A53Z&ske=2023-02-27T11%3A08%3A53Z&sks=b&skv=2021-08-06&sig=LHTekv2yZ/s7ifgHIJLHvw5bHbPhgDNwhOXNAheXWww%3D',
         imageAlt: "Llamas and pinatas",
     },
     // More products...
