@@ -1,4 +1,4 @@
-import {useQuery} from "react-query";
+import {useQuery, useMutation} from "react-query";
 import {useState} from "react";
 import Prompt from "@/components/Prompt";
 
@@ -10,11 +10,14 @@ type Image = {
 
 export default function Home() {
 
+    const stage = 3
+    const api = process.env.NEXT_PUBLIC_API_URL
+
     const [images, setImages] = useState<Image[]>([])
 
     // Query images from the API
     const query = useQuery('todos', ()=>{
-        return fetch('http://localhost:3000/images?stage=3',{
+        return fetch(`${api}/images?stage=${stage}`,{
             method: 'GET',
         })
             .then(res => res.json())
@@ -25,13 +28,36 @@ export default function Home() {
         }
     })
 
+    // post prompt to the API
+    const { mutate } = useMutation(
+        (prompt: string) => {
+            return fetch(`${api}/images?prompt=${prompt}&stage=${stage}`, {
+                method: 'PUT',
+            })
+                .then(res => res.json()).then(data => {
+                    console.log(data)
+                    setImages([data,...images])
+                })
+        }
+    )
+
+    // Submit prompt to the API
+    const onSubmit = (prompt: string) => {
+
+        // encode prompt to base64
+        const encodedPrompt = btoa(prompt)
+        console.log('encoded',encodedPrompt)
+        mutate(encodedPrompt)
+
+    }
+
 
 
     return (
         <div className="bg-white rounded-2xl">
 
             <div className="mx-auto max-w-2xl py-10 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <Prompt/>
+                <Prompt onSubmit={onSubmit}/>
                 <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                     {images.map((image) => (
                         <div key={image.id} className="group relative">

@@ -4,7 +4,11 @@ type Inputs = {
     prompt: string,
 };
 
-export default function Prompt(props: any) {
+type Props = {
+    onSubmit: (prompt: string) => void
+}
+
+export default function Prompt(props: Props) {
 
     const {onSubmit} = props;
 
