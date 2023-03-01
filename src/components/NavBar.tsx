@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {useState} from 'react'
+import {Dialog} from '@headlessui/react'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import avatarImage from '@/images/avatar.jpg'
+import Link from "next/link";
 
 const navigation = [
-    { name: 'Me 👋🏾', href: '#' },
-    { name: '¿ 🇲🇽 ?', href: '#' },
-    { name: 'History ⚔️', href: '#' },
-    { name: 'Culture 🎭', href: '#' },
-    { name: 'Food 🌮', href: '#' },
-    { name: 'Oaxaca 🌴', href: '#' },
-    { name: '🧟‍♂️ vs 🤖', href: '#' },
+    {name: 'Me 👋🏾', href: '/stages/1'},
+    {name: '¿ 🇲🇽 ?', href: '/stages/2'},
+    {name: 'History ⚔️', href: '/stages/3'},
+    {name: 'Culture 🎭', href: '/stages/4'},
+    {name: 'Food 🌮', href: '/stages/5'},
+    {name: 'Oaxaca 🌴', href: '/stages/6'},
+    {name: '🧟‍♂️ vs 🤖', href: '/stages/7'},
 
 ]
 
@@ -22,15 +23,17 @@ export default function NavBar() {
         <header>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <Image
-                        src={avatarImage}
-                        alt=""
-                        sizes={'4rem'}
-                        className={
-                            'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-16 w-16'
-                        }
-                        priority
-                    />
+                    <Link href="/" >
+                        <Image
+                            src={avatarImage}
+                            alt="Rolando's avatar"
+                            sizes={'2.25rem'}
+                            className={
+                                'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9'
+                            }
+                            priority
+                        />
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -39,7 +42,7 @@ export default function NavBar() {
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -57,8 +60,9 @@ export default function NavBar() {
                 </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div className="fixed inset-0 z-10"/>
+                <Dialog.Panel
+                    className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Image
                             src={avatarImage}
@@ -75,7 +79,7 @@ export default function NavBar() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
