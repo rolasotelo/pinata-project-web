@@ -1,4 +1,4 @@
-import {RefAttributes, useState} from "react";
+import {useState} from "react";
 import naughtyWords from "naughty-words";
 import sleep from "@/lib/sleep";
 import seeds from "@/lib/seeds";
@@ -6,6 +6,7 @@ import CanvasPrompt from "@/components/CanvasPrompt";
 import Canvas from "@/components/Canvas";
 import uploadFile from "@/lib/upload";
 import Script from "next/script";
+import Predictions from "@/components/Predictions";
 
 export default function ImageAndTextToImageForm() {
     const [error, setError] = useState(null);
@@ -33,55 +34,52 @@ export default function ImageAndTextToImageForm() {
 
         const fileUrl = await uploadFile(scribble);
 
-        //const fileUrl = "https://i.imgur.com/3ZQ3Z9M.png";
-        // console.log(scribble);
-        // await fetch(scribble)
-        //     .then(res => res.blob())
-        //     .then(console.log)
+        const body = {
+            prompt,
+            image: fileUrl,
+        };
 
-        // const body = {
-        //     prompt,
-        //     image: fileUrl,
-        // };
-        //
-        // const response = await fetch("/api/predictions", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(body),
-        // });
-        // let prediction = await response.json();
-        //
-        // setPredictions((predictions) => ({
-        //     ...predictions,
-        //     [prediction.id]: prediction,
-        // }));
-        //
-        // if (response.status !== 201) {
-        //     setError(prediction.detail);
-        //     return;
-        // }
-        //
-        // while (
-        //     prediction.status !== "succeeded" &&
-        //     prediction.status !== "failed"
-        //     ) {
-        //     await sleep(500);
-        //     const response = await fetch("/api/predictions/" + prediction.id);
-        //     prediction = await response.json();
-        //     setPredictions((predictions) => ({
-        //         ...predictions,
-        //         [prediction.id]: prediction,
-        //     }));
-        //     if (response.status !== 200) {
-        //         setError(prediction.detail);
-        //         return;
-        //     }
-        // }
-        //
-        // setIsProcessing(false);
+        const response = await fetch("/api/predictions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+        });
+        let prediction = await response.json();
+
+        setPredictions((predictions) => ({
+            ...predictions,
+            [prediction.id]: prediction,
+        }));
+
+        if (response.status !== 201) {
+            setError(prediction.detail);
+            return;
+        }
+
+        while (
+            prediction.status !== "succeeded" &&
+            prediction.status !== "failed"
+            ) {
+            await sleep(500);
+            const response = await fetch("/api/predictions/" + prediction.id);
+            prediction = await response.json();
+            setPredictions((predictions) => ({
+                ...predictions,
+                [prediction.id]: prediction,
+            }));
+            if (response.status !== 200) {
+                setError(prediction.detail);
+                return;
+            }
+        }
+
+        setIsProcessing(false);
     };
+
+    console.log(predictions)
+
 
     return (
             <div className="container max-w-[512px] mx-auto">
@@ -97,6 +95,11 @@ export default function ImageAndTextToImageForm() {
                     initialPrompt={initialPrompt}
                     onSubmit={handleSubmit}
                     scribbleExists={scribbleExists}
+                />
+                {/*@ts-ignore*/}
+                <Predictions
+                    predictions={predictions}
+                    submissionCount={submissionCount}
                 />
                 <Script src="https://js.upload.io/upload-js-full/v1"/>
             </div>
