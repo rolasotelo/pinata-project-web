@@ -8,7 +8,7 @@ type Props = {
     onSubmit: (prompt: string) => void
 }
 
-export default function Prompt(props: Props) {
+export default function TextToImageForm(props: Props) {
 
     const {onSubmit} = props;
 
