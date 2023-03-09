@@ -32,7 +32,7 @@ export default function ImageAndTextToImageForm() {
         setIsProcessing(true);
 
         const fileUrl = await uploadFile(scribble);
-        console.log('fileUrl', fileUrl)
+
         //const fileUrl = "https://i.imgur.com/3ZQ3Z9M.png";
         // console.log(scribble);
         // await fetch(scribble)

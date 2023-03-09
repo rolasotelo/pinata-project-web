@@ -18,7 +18,6 @@ export default function TextToImageForm(props: Props) {
         // clean input from text
         resetField('prompt')
         onSubmit(data.prompt)
-        console.log(data);
     }
 
 

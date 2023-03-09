@@ -1,10 +1,10 @@
 import {useQuery, useMutation} from "react-query";
-import { useState} from "react";
+import {useState} from "react";
 import TextToImageForm from "@/components/TextToImageForm";
 import {useRouter} from "next/router";
 import ImagesWall from "@/components/ImagesWall";
 import ImageAndTextToImageForm from "@/components/ImageAndTextToImageForm";
-import {getPostData} from "@/lib/getArticles";
+import {getSlideData} from "@/lib/getSlides";
 import {renderMarkdown} from "@/lib/renderMarkdown";
 import {MDXRemote} from "next-mdx-remote";
 
@@ -23,9 +23,6 @@ export default function Stage({stageData, html}) {
     const stage = Number.parseInt(id as string)
 
     const [images, setImages] = useState<Image[]>([])
-
-    console.log(stageData.title)
-
 
     // Query images from the API
     const query = useQuery(`stage-${stage}`, () => {
@@ -68,8 +65,10 @@ export default function Stage({stageData, html}) {
             <h1 className="text-4xl font-bold text-center mb-10">{stageData.title}</h1>
             {form}
             <ImagesWall images={images}/>
-            <hr className="my-10"/>
-            <MDXRemote {...html}/>
+
+            {student !== 'true' && (<>
+                <hr className="my-10"/>
+                <MDXRemote {...html}/></>)}
         </>
     )
 }
@@ -122,7 +121,7 @@ type IdToFileNameType = {
 }
 
 export async function getStaticProps(context: PropsGSP) {
-    console.log('context', context)
+
     const idToFileName: IdToFileNameType = {
         '1': 'me',
         '2': 'mexico',
@@ -133,7 +132,7 @@ export async function getStaticProps(context: PropsGSP) {
         '7': 'humanvsai'
     }
     const params = context.params;
-    const stageData = getPostData(idToFileName[params.id]);
+    const stageData = getSlideData(idToFileName[params.id]);
     const renderHTML = await renderMarkdown(stageData.content)
     return {
         props: {

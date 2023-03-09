@@ -1,5 +1,5 @@
 import packageData from "../../package.json";
-import dataUriToBuffer from "./data-uri-to-buffer";
+import dataUriToBuffer from "./dataUriToBuffer";
 
 const UPLOAD_IO_ACCOUNT_ID = process.env.NEXT_PUBLIC_UPLOAD_IO_ACCOUNT_ID;
 const UPLOAD_IO_PUBLIC_API_KEY = process.env.NEXT_PUBLIC_UPLOAD_IO_PUBLIC_API_KEY;
