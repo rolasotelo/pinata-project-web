@@ -1,7 +1,8 @@
-import {Image} from "@/pages/stages/[id]";
+import {ImageType} from "@/pages/stages/[id]";
+import Image from "next/image";
 
 type Props = {
-    images: Image[]
+    images: ImageType[]
 }
 export default function ImagesWall({images}: Props)  {
     return (
@@ -11,7 +12,7 @@ export default function ImagesWall({images}: Props)  {
                 <div key={image.id} className="group relative">
                     <div
                         className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
-                        <img
+                        <Image
                             src={image.image_url}
                             alt={image.prompt}
                             className="h-full w-full object-cover object-center lg:h-full lg:w-full"

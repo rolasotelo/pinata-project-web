@@ -8,7 +8,7 @@ import {getSlideData} from "@/lib/getSlides";
 import {renderMarkdown} from "@/lib/renderMarkdown";
 import {MDXRemote} from "next-mdx-remote";
 
-export type Image = {
+export type ImageType = {
     id: string
     image_url: string
     prompt: string
@@ -22,7 +22,7 @@ export default function Stage({stageData, html}) {
 
     const stage = Number.parseInt(id as string)
 
-    const [images, setImages] = useState<Image[]>([])
+    const [images, setImages] = useState<ImageType[]>([])
 
     // Query images from the API
     const query = useQuery(`stage-${stage}`, () => {

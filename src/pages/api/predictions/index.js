@@ -1,6 +1,6 @@
 const REPLICATE_API_HOST = "https://api.replicate.com";
 
-import packageData from "../../../package.json";
+import packageData from "../../../../package.json";
 
 export default async function handler(req, res) {
 
