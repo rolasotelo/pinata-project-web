@@ -78,9 +78,6 @@ export default function ImageAndTextToImageForm() {
         setIsProcessing(false);
     };
 
-    console.log(predictions)
-
-
     return (
             <div className="container max-w-[512px] mx-auto">
                 <Canvas
