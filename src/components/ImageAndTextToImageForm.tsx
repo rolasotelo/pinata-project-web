@@ -7,10 +7,11 @@ import Canvas from "@/components/Canvas";
 import uploadFile from "@/lib/upload";
 import Script from "next/script";
 import Predictions from "@/components/Predictions";
-import {useMutation} from "react-query";
+import {useMutation, useQuery} from "react-query";
 import {useRouter} from "next/router";
-import {ImageDivider} from "@/components/TextToImageForm";
+import {ImageDivider, ImageType} from "@/components/TextToImageForm";
 import Loader from "@/components/Loader";
+import ImagesWall from "@/components/ImagesWall";
 
 const api = process.env.NEXT_PUBLIC_API_URL
 
@@ -31,12 +32,25 @@ export default function ImageAndTextToImageForm(props: Props) {
     const [seed] = useState(seeds[Math.floor(Math.random() * seeds.length)]);
     const [scribbleExists, setScribbleExists] = useState(false);
     const [initialPrompt] = useState(seed.prompt);
+    const [images, setImages] = useState<ImageType[]>([])
 
     const router = useRouter()
     const {id} = router.query
 
     const stage = Number.parseInt(id as string)
 
+    // Query images from the API
+    const query = useQuery(`stage-${stage}`, () => {
+        return fetch(`${api}/images?stage=${stage}`, {
+            method: 'GET',
+        })
+            .then(res => res.json())
+    }, {
+        onSuccess: (data) => {
+            setImages(data['images'])
+        },
+        enabled: id !== undefined
+    })
 
     const {mutate} = useMutation(
 
@@ -47,7 +61,7 @@ export default function ImageAndTextToImageForm(props: Props) {
                 method: 'POST',
             })
                 .then(res => res.json()).then(data => {
-                    console.log(data)
+                    setImages([data, ...images])
                 })
         }
     )
@@ -127,17 +141,17 @@ export default function ImageAndTextToImageForm(props: Props) {
                         <h2 className="inline sm:block lg:inline xl:block">{props.question}</h2>{' '}
                         <p className="py-3 inline sm:block lg:inline xl:block underline decoration-dashed text-teal-500">{props.question_es}</p>
                         <span className="text-3xl text-pink-500 underline decoration-dotted">{props.question_cz}</span>
-                        <div className="shadow-lg border border-teal-700 border-8 rounded-2xl mt-5 p-2 bg-white flex">
-                            <div className="w-1/2 aspect-square relative border">
+                        <div className="shadow-lg border border-teal-700 border-4 rounded-md mt-5 bg-white flex">
+                            <div className="w-1/2 aspect-square relative border rounded-md">
                                 <img
-                                    src="https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/scribble_input_3QKD64HV.png"
+                                    src="https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/scribble_input_2L5NDWjJ.png"
                                     alt="input scribble"
-                                    className="w-full aspect-square"
+                                    className="w-full aspect-square rounded-md"
                                 />
                             </div>
                             <div className="w-1/2 aspect-square relative">
                                 <img
-                                    src="https://replicate.delivery/pbxt/HSuEhjqpOL4QElOYPEjWWmrqEeste8pesyvd9beNq1gRMfxEC/output_1.png"
+                                    src="https://rolasotelo-portfolio.s3.amazonaws.com/bear_taco.png"
                                     alt="output scribble"
                                     className="w-full aspect-square"
                                 />
@@ -162,12 +176,14 @@ export default function ImageAndTextToImageForm(props: Props) {
                 </div>
             </div>
 
-            {Object.keys(predictions).length > 0 && <ImageDivider/>}
-            {/*@ts-ignore*/}
-            <Predictions
-                predictions={predictions}
-                submissionCount={submissionCount}
-            />
+            {/*{Object.keys(predictions).length > 0 && <ImageDivider/>}*/}
+            {/*/!*@ts-ignore*!/*/}
+            {/*<Predictions*/}
+            {/*    predictions={predictions}*/}
+            {/*    submissionCount={submissionCount}*/}
+            {/*/>*/}
+            <ImageDivider/>
+            <ImagesWall images={images}/>
             <Script src="https://js.upload.io/upload-js-full/v1"/>
         </div>
 
