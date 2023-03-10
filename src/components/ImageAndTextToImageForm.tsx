@@ -7,8 +7,18 @@ import Canvas from "@/components/Canvas";
 import uploadFile from "@/lib/upload";
 import Script from "next/script";
 import Predictions from "@/components/Predictions";
+import {useMutation} from "react-query";
+import {useRouter} from "next/router";
 
-export default function ImageAndTextToImageForm() {
+const api = process.env.NEXT_PUBLIC_API_URL
+
+type Props = {
+    question: string
+}
+type MutationInputs = {prompt: string, input_url: string, prompt_context: string, image_url: string}
+
+
+export default function ImageAndTextToImageForm(props: Props) {
     const [error, setError] = useState(null);
     const [submissionCount, setSubmissionCount] = useState(0);
     const [predictions, setPredictions] = useState({});
@@ -17,6 +27,26 @@ export default function ImageAndTextToImageForm() {
     const [seed] = useState(seeds[Math.floor(Math.random() * seeds.length)]);
     const [scribbleExists, setScribbleExists] = useState(false);
     const [initialPrompt] = useState(seed.prompt);
+
+    const router = useRouter()
+    const {id} = router.query
+
+    const stage = Number.parseInt(id as string)
+
+
+    const {mutate} = useMutation(
+
+        // @ts-ignore
+        (input :MutationInputs) => {
+            const {prompt, input_url, prompt_context, image_url} = input
+            return fetch(`${api}/images?prompt=${prompt}&stage=${stage}&input_url=${input_url}&image_url=${image_url}&prompt_context=${prompt_context}`, {
+                method: 'POST',
+            })
+                .then(res => res.json()).then(data => {
+                    console.log(data)
+                })
+        }
+    )
 
     const handleSubmit = async (e: { preventDefault: () => void; target: { prompt: { value: string; }; }; }) => {
         e.preventDefault();
@@ -58,6 +88,8 @@ export default function ImageAndTextToImageForm() {
             return;
         }
 
+        let new_response;
+
         while (
             prediction.status !== "succeeded" &&
             prediction.status !== "failed"
@@ -65,6 +97,7 @@ export default function ImageAndTextToImageForm() {
             await sleep(500);
             const response = await fetch("/api/predictions/" + prediction.id);
             prediction = await response.json();
+            new_response = prediction
             setPredictions((predictions) => ({
                 ...predictions,
                 [prediction.id]: prediction,
@@ -75,31 +108,35 @@ export default function ImageAndTextToImageForm() {
             }
         }
 
+        const encodedPrompt = btoa(prompt);
+        const encodedPromptContext = btoa(props.question);
+        mutate({prompt: encodedPrompt, input_url: fileUrl, prompt_context: encodedPromptContext, image_url: new_response.output[new_response.output.length - 1]})
+
         setIsProcessing(false);
     };
 
     return (
-            <div className="container max-w-[512px] mx-auto">
-                <Canvas
-                    startingPaths={seed.paths}
-                    onScribble={setScribble}
-                    scribbleExists={scribbleExists}
-                    setScribbleExists={setScribbleExists}
+        <div className="container max-w-[512px] mx-auto">
+            <Canvas
+                startingPaths={seed.paths}
+                onScribble={setScribble}
+                scribbleExists={scribbleExists}
+                setScribbleExists={setScribbleExists}
 
-                />
+            />
 
-                <CanvasPrompt
-                    initialPrompt={initialPrompt}
-                    onSubmit={handleSubmit}
-                    scribbleExists={scribbleExists}
-                />
-                {/*@ts-ignore*/}
-                <Predictions
-                    predictions={predictions}
-                    submissionCount={submissionCount}
-                />
-                <Script src="https://js.upload.io/upload-js-full/v1"/>
-            </div>
+            <CanvasPrompt
+                initialPrompt={initialPrompt}
+                onSubmit={handleSubmit}
+                scribbleExists={scribbleExists}
+            />
+            {/*@ts-ignore*/}
+            <Predictions
+                predictions={predictions}
+                submissionCount={submissionCount}
+            />
+            <Script src="https://js.upload.io/upload-js-full/v1"/>
+        </div>
 
 
     )

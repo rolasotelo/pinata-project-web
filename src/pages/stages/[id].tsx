@@ -11,7 +11,7 @@ export default function Stage({stageData, html}) {
     const router = useRouter()
     const {student} = router.query
 
-    const form = stageData.form === 'canvas' ? (<ImageAndTextToImageForm/>) : (
+    const form = stageData.form === 'canvas' ? (<ImageAndTextToImageForm question={stageData.question}/>) : (
         <TextToImageForm question={stageData.question} question_es={stageData.question_es}
                          question_cz={stageData.question_cz}/>)
 
