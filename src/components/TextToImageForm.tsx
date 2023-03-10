@@ -3,6 +3,7 @@ import {useMutation, useQuery} from "react-query";
 import {useRouter} from "next/router";
 import {useState} from "react";
 import ImagesWall from "@/components/ImagesWall";
+import {PhotoIcon} from "@heroicons/react/20/solid";
 
 type Inputs = {
     prompt: string,
@@ -14,6 +15,22 @@ export type ImageType = {
     image_url: string
     input_url: string
     prompt: string
+    prompt_context: string
+}
+
+function ImageDivider() {
+    return (
+        <div className="relative py-2">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-gray-300"/>
+            </div>
+            <div className="relative flex justify-center">
+        <span className="bg-white px-2 text-gray-500">
+          <PhotoIcon className="h-5 w-5 text-gray-500" aria-hidden="true"/>
+        </span>
+            </div>
+        </div>
+    )
 }
 
 type Props = {
@@ -53,10 +70,12 @@ export default function TextToImageForm(props: Props) {
         enabled: id !== undefined
     })
 
+    const encodedPromptContext = btoa(props.question);
+
     // post prompt to the API
     const {mutate} = useMutation(
         (prompt: string) => {
-            return fetch(`${api}/images?prompt=${prompt}&stage=${stage}`, {
+            return fetch(`${api}/images?prompt=${prompt}&stage=${stage}&prompt_context=${encodedPromptContext}`, {
                 method: 'POST',
             })
                 .then(res => res.json()).then(data => {
@@ -111,6 +130,7 @@ export default function TextToImageForm(props: Props) {
                     </form>
                 </div>
             </div>
+            <ImageDivider/>
             <ImagesWall images={images}/>
         </>
     )

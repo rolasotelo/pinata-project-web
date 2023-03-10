@@ -5,6 +5,40 @@ import {getSlideData} from "@/lib/getSlides";
 import {renderMarkdown} from "@/lib/renderMarkdown";
 import {MDXRemote} from "next-mdx-remote";
 
+import {BookOpenIcon, LightBulbIcon} from '@heroicons/react/20/solid'
+
+function SlideDivider() {
+    return (
+        <div className="relative py-2">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-gray-300"/>
+            </div>
+            <div className="relative flex justify-center">
+        <span className="bg-white px-2 text-gray-500">
+          <BookOpenIcon className="h-5 w-5 text-gray-500" aria-hidden="true"/>
+        </span>
+            </div>
+        </div>
+    )
+}
+
+function QuestionDivider() {
+    return (
+        <div className="relative py-2">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                <div className="w-full border-t border-gray-300"/>
+            </div>
+            <div className="relative flex justify-center">
+        <span className="bg-white px-2 text-gray-500">
+          <LightBulbIcon className="h-5 w-5 text-gray-500" aria-hidden="true"/>
+        </span>
+            </div>
+        </div>
+    )
+}
+
+
+
 // @ts-ignore
 export default function Stage({stageData, html}) {
 
@@ -17,10 +51,11 @@ export default function Stage({stageData, html}) {
 
     return (
         <>
-            <h1 className="text-3xl font-bold text-center mb-5">{stageData.title}</h1>
+            <h1 className="text-3xl font-bold text-center">{stageData.title}</h1>
+            <QuestionDivider/>
             {form}
             {student !== 'true' && (<>
-                <hr className="my-5"/>
+                <SlideDivider/>
                 <MDXRemote {...html}/></>)}
         </>
     )
