@@ -12,7 +12,7 @@ export default function ImagesWall({images}: Props) {
                 <div
                     className="my-4 grid grid-cols-1 gap-y-4 gap-x-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2">
                     {images.map((image) => (
-                        <SingleImageCard image={image}/>
+                        <SingleImageCard image={image} key={image.id}/>
                     ))}
                 </div>
             </div>
