@@ -1,4 +1,5 @@
-import {ImageType} from "@/pages/stages/[id]";
+import {ImageType} from "@/components/TextToImageForm";
+
 
 type Props = {
     images: ImageType[]
