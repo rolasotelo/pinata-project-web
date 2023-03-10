@@ -38,14 +38,15 @@ function QuestionDivider() {
 }
 
 
-
 // @ts-ignore
 export default function Stage({stageData, html}) {
 
     const router = useRouter()
     const {student} = router.query
 
-    const form = stageData.form === 'canvas' ? (<ImageAndTextToImageForm question={stageData.question}/>) : (
+    const form = stageData.form === 'canvas' ? (
+        <ImageAndTextToImageForm question={stageData.question} question_es={stageData.question_es}
+                                 question_cz={stageData.question_cz}/>) : (
         <TextToImageForm question={stageData.question} question_es={stageData.question_es}
                          question_cz={stageData.question_cz}/>)
 

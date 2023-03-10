@@ -18,7 +18,7 @@ export type ImageType = {
     prompt_context: string
 }
 
-function ImageDivider() {
+export function ImageDivider() {
     return (
         <div className="relative py-2">
             <div className="absolute inset-0 flex items-center" aria-hidden="true">

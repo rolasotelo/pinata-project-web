@@ -9,11 +9,15 @@ import Script from "next/script";
 import Predictions from "@/components/Predictions";
 import {useMutation} from "react-query";
 import {useRouter} from "next/router";
+import {ImageDivider} from "@/components/TextToImageForm";
+import Loader from "@/components/Loader";
 
 const api = process.env.NEXT_PUBLIC_API_URL
 
 type Props = {
     question: string
+    question_es: string
+    question_cz: string
 }
 type MutationInputs = {prompt: string, input_url: string, prompt_context: string, image_url: string}
 
@@ -116,20 +120,49 @@ export default function ImageAndTextToImageForm(props: Props) {
     };
 
     return (
-        <div className="container max-w-[512px] mx-auto">
-            <Canvas
-                startingPaths={seed.paths}
-                onScribble={setScribble}
-                scribbleExists={scribbleExists}
-                setScribbleExists={setScribbleExists}
+        <div>
+            <div className="bg-gray-800 py-6 rounded-2xl">
+                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:gap-32 lg:px-8">
+                    <div className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl flex justify-between flex-col">
+                        <h2 className="inline sm:block lg:inline xl:block">{props.question}</h2>{' '}
+                        <p className="py-3 inline sm:block lg:inline xl:block underline decoration-dashed text-teal-500">{props.question_es}</p>
+                        <span className="text-3xl text-pink-500 underline decoration-dotted">{props.question_cz}</span>
+                        <div className="shadow-lg border border-teal-700 border-8 rounded-2xl mt-5 p-2 bg-white flex">
+                            <div className="w-1/2 aspect-square relative border">
+                                <img
+                                    src="https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/scribble_input_3QKD64HV.png"
+                                    alt="input scribble"
+                                    className="w-full aspect-square"
+                                />
+                            </div>
+                            <div className="w-1/2 aspect-square relative">
+                                <img
+                                    src="https://replicate.delivery/pbxt/HSuEhjqpOL4QElOYPEjWWmrqEeste8pesyvd9beNq1gRMfxEC/output_1.png"
+                                    alt="output scribble"
+                                    className="w-full aspect-square"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                   <div className="container max-w-[512px] mx-auto">
+                       <Canvas
+                           startingPaths={seed.paths}
+                           onScribble={setScribble}
+                           scribbleExists={scribbleExists}
+                           setScribbleExists={setScribbleExists}
 
-            />
+                       />
 
-            <CanvasPrompt
-                initialPrompt={initialPrompt}
-                onSubmit={handleSubmit}
-                scribbleExists={scribbleExists}
-            />
+                       <CanvasPrompt
+                           initialPrompt={initialPrompt}
+                           onSubmit={handleSubmit}
+                           scribbleExists={scribbleExists}
+                       />
+                   </div>
+                </div>
+            </div>
+
+            {Object.keys(predictions).length > 0 && <ImageDivider/>}
             {/*@ts-ignore*/}
             <Predictions
                 predictions={predictions}
