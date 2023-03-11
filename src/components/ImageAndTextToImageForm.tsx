@@ -6,11 +6,9 @@ import CanvasPrompt from "@/components/CanvasPrompt";
 import Canvas from "@/components/Canvas";
 import uploadFile from "@/lib/upload";
 import Script from "next/script";
-import Predictions from "@/components/Predictions";
 import {useMutation, useQuery} from "react-query";
 import {useRouter} from "next/router";
 import {ImageDivider, ImageType} from "@/components/TextToImageForm";
-import Loader from "@/components/Loader";
 import ImagesWall from "@/components/ImagesWall";
 
 const api = process.env.NEXT_PUBLIC_API_URL
@@ -176,12 +174,6 @@ export default function ImageAndTextToImageForm(props: Props) {
                 </div>
             </div>
 
-            {/*{Object.keys(predictions).length > 0 && <ImageDivider/>}*/}
-            {/*/!*@ts-ignore*!/*/}
-            {/*<Predictions*/}
-            {/*    predictions={predictions}*/}
-            {/*    submissionCount={submissionCount}*/}
-            {/*/>*/}
             <ImageDivider/>
             <ImagesWall images={images}/>
             <Script src="https://js.upload.io/upload-js-full/v1"/>

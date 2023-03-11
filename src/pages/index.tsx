@@ -1,5 +1,3 @@
-import ImageAndTextToImageForm from "@/components/ImageAndTextToImageForm";
-
 export default function Home() {
 
 

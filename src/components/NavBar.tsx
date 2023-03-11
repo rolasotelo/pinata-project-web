@@ -47,16 +47,16 @@ export default function NavBar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6">
+                        <a key={item.name} href={item.href} className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
                             {item.name}
                         </a>
 
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm font-semibold leading-6">
+                    <Link href="/images" className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
                         Your images 👩🏼‍🎨 <span aria-hidden="true">&rarr;</span>
-                    </a>
+                    </Link>
                 </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -94,14 +94,6 @@ export default function NavBar() {
                                         {item.name}
                                     </a>
                                 ))}
-                            </div>
-                            <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Log in
-                                </a>
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,9 @@ export default function CanvasPrompt({initialPrompt, onSubmit, scribbleExists,}:
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
+        setPrompt("");
         onSubmit(e);
+        // clear the prompt
     };
 
     return (

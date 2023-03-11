@@ -19,7 +19,7 @@ export default function SingleImageCard({image}: Props) {
             </div>
             <div className="flex flex-1 flex-col space-y-2 p-4">
                 <h3 className="text-sm font-medium text-gray-800">
-                    <a href={image.image_url}>
+                    <a href={image.image_url} target="_blank">
                         <span aria-hidden="true" className="absolute inset-0" />
                         {image.prompt_context}
                     </a>
