@@ -8,7 +8,7 @@ export default function DoubleImageCard({image}: Props) {
     return (
         <div
             key={image.id}
-            className="col-span-2 group relative flex flex-col overflow-hidden rounded-lg border border-2 border-teal-700 bg-pink-300"
+            className="col-span-2 group relative flex flex-col overflow-hidden rounded-2xl bg-teal-200"
         >
             <div className="flex flex-row">
             <div className="aspect-w-1 w-full aspect-h-1 bg-gray-200 group-hover:opacity-75 sm:aspect-none">
@@ -27,13 +27,13 @@ export default function DoubleImageCard({image}: Props) {
                 </div>
             </div>
             <div className="flex flex-1 flex-col space-y-2 p-4">
-                <h3 className="text-sm font-medium text-gray-800">
+                <h3 className="text-md font-bold text-gray-800">
                     <a href={image.image_url} target="_blank">
                         <span aria-hidden="true" className="absolute inset-0" />
                         {image.prompt_context}
                     </a>
                 </h3>
-                <p className="text-sm">{image.prompt}</p>
+                <p className="text-sm">{image.prompt[0].toUpperCase() + image.prompt.slice(1)}</p>
             </div>
         </div>
     )
