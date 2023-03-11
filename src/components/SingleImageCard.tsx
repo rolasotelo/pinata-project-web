@@ -8,7 +8,7 @@ export default function SingleImageCard({image}: Props) {
     return (
         <div
             key={image.id}
-            className="group relative flex flex-col overflow-hidden rounded-lg border border-2 border-teal-700 bg-pink-300"
+            className="group relative flex flex-col overflow-hidden rounded-lg bg-pink-300"
         >
             <div className="aspect-w-1 w-full aspect-h-1 bg-gray-200 group-hover:opacity-75 sm:aspect-none">
                 <img

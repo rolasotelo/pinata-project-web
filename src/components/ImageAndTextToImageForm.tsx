@@ -17,6 +17,7 @@ type Props = {
     question: string
     question_es: string
     question_cz: string
+    children?: React.ReactNode
 }
 type MutationInputs = {prompt: string, input_url: string, prompt_context: string, image_url: string}
 
@@ -173,7 +174,7 @@ export default function ImageAndTextToImageForm(props: Props) {
                    </div>
                 </div>
             </div>
-
+            {props.children}
             <ImageDivider/>
             <ImagesWall images={images}/>
             <Script src="https://js.upload.io/upload-js-full/v1"/>

@@ -37,6 +37,8 @@ type Props = {
     question: string
     question_es: string
     question_cz: string
+
+    children?: React.ReactNode
 }
 
 const api = process.env.NEXT_PUBLIC_API_URL
@@ -130,6 +132,7 @@ export default function TextToImageForm(props: Props) {
                     </form>
                 </div>
             </div>
+            {props.children}
             <ImageDivider/>
             <ImagesWall images={images}/>
         </>

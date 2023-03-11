@@ -4,7 +4,6 @@ import ImageAndTextToImageForm from "@/components/ImageAndTextToImageForm";
 import {getSlideData} from "@/lib/getSlides";
 import {renderMarkdown} from "@/lib/renderMarkdown";
 import {MDXRemote} from "next-mdx-remote";
-
 import {BookOpenIcon, LightBulbIcon} from '@heroicons/react/20/solid'
 
 function SlideDivider() {
@@ -44,20 +43,31 @@ export default function Stage({stageData, html}) {
     const router = useRouter()
     const {student} = router.query
 
-    const form = stageData.form === 'canvas' ? (
-        <ImageAndTextToImageForm question={stageData.question} question_es={stageData.question_es}
-                                 question_cz={stageData.question_cz}/>) : (
-        <TextToImageForm question={stageData.question} question_es={stageData.question_es}
-                         question_cz={stageData.question_cz}/>)
+    const slides = student !== 'true' && (<>
+        <SlideDivider/>
+        <MDXRemote {...html} components={{
+            h1: (props) => <h1 {...props} className="text-3xl font-bold text-center py-4 bg-pink-50 rounded-2xl mx-40"/>,
+            h2: (props) => <h1 {...props} className="text-2xl font-bold text-gray-800 text-center py-3 bg-teal-50 rounded-2xl mx-40"/>,
+            h3: (props) => <h1 {...props} className="text-xl font-bold text-pink-800 text-center py-3"/>,
+            h4: (props) => <h1 {...props} className="text-2xl font-bold text-center py-2"/>,
+            p: (props) => <p {...props} className="text-xl text-center py-4 mx-40"/>,
+            img: (props) => {
+                return (
+                    <img {...props} className="w-7/12 mx-auto"/>
+                )
+            },
+            ul: (props) => <ul {...props} className="text-xl justify-around w-5/12 mx-auto pb-8"/>,
+            hr: (props) => <hr {...props} className="w-9/12 mx-auto py-4"/>,
+        }}/></>)
 
     return (
         <>
             <h1 className="text-3xl font-bold text-center">{stageData.title}</h1>
             <QuestionDivider/>
-            {form}
-            {student !== 'true' && (<>
-                <SlideDivider/>
-                <MDXRemote {...html}/></>)}
+            {stageData.form !== 'canvas' && <TextToImageForm question={stageData.question} question_es={stageData.question_es}
+                             question_cz={stageData.question_cz}>{slides}</TextToImageForm>}
+            {stageData.form === 'canvas' && <ImageAndTextToImageForm question={stageData.question} question_es={stageData.question_es}
+                                                             question_cz={stageData.question_cz}>{slides}</ImageAndTextToImageForm>}
         </>
     )
 }
