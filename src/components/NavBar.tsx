@@ -4,26 +4,28 @@ import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import avatarImage from '@/images/avatar.jpg'
 import Link from "next/link";
-
-const navigation = [
-    {name: 'Me 👋🏾', href: '/stages/1'},
-    {name: '¿ 🇲🇽 ?', href: '/stages/2'},
-    {name: 'History ⚔️', href: '/stages/3'},
-    {name: 'Culture 🎭', href: '/stages/4'},
-    {name: 'Food 🌮', href: '/stages/5'},
-    {name: 'Oaxaca 🌴', href: '/stages/6'},
-    {name: '🧟‍♂️ vs 🤖', href: '/stages/7'},
-
-]
+import {useRouter} from "next/router";
 
 export default function NavBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const router = useRouter()
+    const {student} = router.query
+
+    const navigation = [
+        {name: 'Me 👋🏾', href: `/stages/1${student === 'true' ? '?student=true' : ''}`},
+        {name: '¿ 🇲🇽 ?', href: `/stages/2${student === 'true' ? '?student=true' : ''}`},
+        {name: 'History ⚔️', href: `/stages/3${student === 'true' ? '?student=true' : ''}`},
+        {name: 'Culture 🎭', href: `/stages/4${student === 'true' ? '?student=true' : ''}`},
+        {name: 'Food 🌮', href: `/stages/5${student === 'true' ? '?student=true' : ''}`},
+        {name: 'Oaxaca 🌴', href: `/stages/6${student === 'true' ? '?student=true' : ''}`},
+        {name: '🧟‍♂️ vs 🤖', href: `/stages/7${student === 'true' ? '?student=true' : ''}`},
+    ]
 
     return (
         <header>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <Link href="/">
+                    <Link href={`/${student === 'true' ? '?student=true' : ''}`}>
                         <Image
                             src={avatarImage}
                             alt="Rolando's avatar"
@@ -47,14 +49,16 @@ export default function NavBar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
+                        <a key={item.name} href={item.href}
+                           className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
                             {item.name}
                         </a>
 
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/images" className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
+                    <Link href={`/images${student === 'true' ? '?student=true' : ''}`}
+                          className="text-m font-semibold leading-6 hover:bg-gray-600 rounded-md p-1">
                         Your images 👩🏼‍🎨 <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
@@ -79,7 +83,7 @@ export default function NavBar() {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
+                            <XMarkIcon className="h-6 w-6 bg-gray-800" aria-hidden="true"/>
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
@@ -95,6 +99,10 @@ export default function NavBar() {
                                     </a>
                                 ))}
                             </div>
+                            <Link href={`/images${student === 'true' ? '?student=true' : ''}`}
+                                  className="text-m text-black font-semibold leading-6 hover:bg-gray-50 rounded-md p-1">
+                                Your images 👩🏼‍🎨 <span aria-hidden="true">&rarr;</span>
+                            </Link>
                         </div>
                     </div>
                 </Dialog.Panel>
