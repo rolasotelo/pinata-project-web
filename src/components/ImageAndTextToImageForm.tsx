@@ -17,9 +17,13 @@ type Props = {
     question: string
     question_es: string
     question_cz: string
+    image_url: string
+    image_alt: string
+    drawing_url: string
+    drawing_alt: string
     children?: React.ReactNode
 }
-type MutationInputs = {prompt: string, input_url: string, prompt_context: string, image_url: string}
+type MutationInputs = { prompt: string, input_url: string, prompt_context: string, image_url: string }
 
 
 export default function ImageAndTextToImageForm(props: Props) {
@@ -52,9 +56,8 @@ export default function ImageAndTextToImageForm(props: Props) {
     })
 
     const {mutate} = useMutation(
-
         // @ts-ignore
-        (input :MutationInputs) => {
+        (input: MutationInputs) => {
             const {prompt, input_url, prompt_context, image_url} = input
             return fetch(`${api}/images?prompt=${prompt}&stage=${stage}&input_url=${input_url}&image_url=${image_url}&prompt_context=${prompt_context}`, {
                 method: 'POST',
@@ -127,7 +130,12 @@ export default function ImageAndTextToImageForm(props: Props) {
 
         const encodedPrompt = btoa(prompt);
         const encodedPromptContext = btoa(props.question);
-        mutate({prompt: encodedPrompt, input_url: fileUrl, prompt_context: encodedPromptContext, image_url: new_response.output[new_response.output.length - 1]})
+        mutate({
+            prompt: encodedPrompt,
+            input_url: fileUrl,
+            prompt_context: encodedPromptContext,
+            image_url: new_response.output[new_response.output.length - 1]
+        })
 
         setIsProcessing(false);
     };
@@ -136,42 +144,43 @@ export default function ImageAndTextToImageForm(props: Props) {
         <div>
             <div className="bg-gray-800 py-6 rounded-2xl">
                 <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:gap-32 lg:px-8">
-                    <div className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl flex justify-between flex-col">
+                    <div
+                        className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl flex justify-between flex-col">
                         <h2 className="inline sm:block lg:inline xl:block">{props.question}</h2>{' '}
                         <p className="py-3 inline sm:block lg:inline xl:block underline decoration-dashed text-teal-500">{props.question_es}</p>
                         <span className="text-3xl text-pink-500 underline decoration-dotted">{props.question_cz}</span>
                         <div className="shadow-lg border border-teal-700 border-4 rounded-md mt-5 bg-white flex">
                             <div className="w-1/2 aspect-square relative border rounded-md">
                                 <img
-                                    src="https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/scribble_input_2L5NDWjJ.png"
-                                    alt="input scribble"
+                                    src={`${props.drawing_url}`}
+                                    alt={`${props.drawing_alt}`}
                                     className="w-full aspect-square rounded-md"
                                 />
                             </div>
                             <div className="w-1/2 aspect-square relative">
                                 <img
-                                    src="https://rolasotelo-portfolio.s3.amazonaws.com/bear_taco.png"
-                                    alt="output scribble"
+                                    src={`${props.image_url}`}
+                                    alt={`${props.image_alt}`}
                                     className="w-full aspect-square"
                                 />
                             </div>
                         </div>
                     </div>
-                   <div className="container max-w-[512px] mx-auto">
-                       <Canvas
-                           startingPaths={seed.paths}
-                           onScribble={setScribble}
-                           scribbleExists={scribbleExists}
-                           setScribbleExists={setScribbleExists}
+                    <div className="container max-w-[512px] mx-auto">
+                        <Canvas
+                            startingPaths={seed.paths}
+                            onScribble={setScribble}
+                            scribbleExists={scribbleExists}
+                            setScribbleExists={setScribbleExists}
 
-                       />
+                        />
 
-                       <CanvasPrompt
-                           initialPrompt={initialPrompt}
-                           onSubmit={handleSubmit}
-                           scribbleExists={scribbleExists}
-                       />
-                   </div>
+                        <CanvasPrompt
+                            initialPrompt={initialPrompt}
+                            onSubmit={handleSubmit}
+                            scribbleExists={scribbleExists}
+                        />
+                    </div>
                 </div>
             </div>
             {props.children}

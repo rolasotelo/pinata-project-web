@@ -5,6 +5,10 @@ question_es: '¿Qué sabes de México?'
 question_cz: 'Co víš o Mexiku?'
 form: 'text'
 date: '2023-02-10'
+image_url: ''
+image_alt: ''
+drawing_url: ''
+drawing_alt: ''
 ---
 
 # Yes Mexico is real 🤣

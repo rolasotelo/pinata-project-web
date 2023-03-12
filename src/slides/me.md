@@ -5,6 +5,10 @@ question_es: '¿Cómo te sientes hoy?'
 question_cz: 'Jak se dnes cítíš?'
 form: 'text'
 date: '2023-02-10'
+image_url: ''
+image_alt: ''
+drawing_url: ''
+drawing_alt: ''
 ---
 
 # *Hola a todos 👋🏾* My name is Rolando Sotelo 🇲🇽
