@@ -7,13 +7,13 @@ type Props = {
 }
 
 export default function CanvasPrompt({initialPrompt, onSubmit, scribbleExists,}: Props) {
-    const [prompt, setPrompt] = useState(initialPrompt);
+    const [prompt, setPrompt] = useState("");
 
     const disabled = !(scribbleExists && prompt?.length > 0);
 
-    useEffect(() => {
-        setPrompt(initialPrompt);
-    }, [initialPrompt]);
+    // useEffect(() => {
+    //     setPrompt(initialPrompt);
+    // }, [initialPrompt]);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();

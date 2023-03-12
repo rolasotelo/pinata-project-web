@@ -23,8 +23,8 @@ export default function Canvas({
 
   async function loadStartingPaths() {
     // @ts-ignore
-    await canvasRef.current.loadPaths(startingPaths);
-    setScribbleExists(true);
+    //await canvasRef.current.loadPaths(startingPaths);
+    //setScribbleExists(true);
     onChange();
   }
 
