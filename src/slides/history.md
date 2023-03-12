@@ -51,4 +51,14 @@ It comprised Mexico, Central America, much of the Southwestern and Central Unite
 * ・Maximilian of Habsburg empire
 * ・Revolution of 1910 and civil war
 
+## Czech and Mexican history
+
+* ・A czech was the first to discover California was not an island
+* ・A czech was the first to learn Seri language
+
+![Seri](https://rolasotelo-portfolio.s3.amazonaws.com/seri-woman.jpg)
+
+* ・In May 2022, the Czech Republic and Mexico celebrated 100 years of the establishment of diplomatic relations. 🇨🇿 💜 🇲🇽
+
+
 ### Let's see what you draw about Mexico. I'm curious.

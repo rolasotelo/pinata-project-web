@@ -38,7 +38,6 @@ Here you have an image with 23 european countries filling the Mexican map. It is
 
 * ・Our capital is Mexico City. Built in a lake. it sinks 12 cm every year. ⛵️
 * ・We have 69 official languages. But Spanish is the most spoken one, followed by Nahuatl and Mayan. 🇪🇸
-* ・In May 2022, the Czech Republic and Mexico celebrated 100 years of the establishment of diplomatic relations. 🇨🇿 💜 🇲🇽
 
 A Beautiful country with a lot of contradictions. A lot of deserts and beautiful beaches. A lot of poverty and a lot of wealth. A lot of violence and a lot of peace. A lot of good food and a lot of bad food. A lot of good music and a lot of bad music. A lot of Mexico.
 

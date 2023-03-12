@@ -76,7 +76,7 @@ export default function Canvas({
 
       <div className="flex flex-row divide-gray-200 justify-around">
         <div className="bg-pink-500 w-full py-1 rounded-md mt-2 mr-1">
-          <button className="flex-row flex w-full justify-center h-full items-center hover:bg-teal-500"  onClick={undo} disabled={!scribbleExists}>
+          <button className="flex-row flex w-full justify-center h-full items-center"  onClick={undo} disabled={!scribbleExists}>
             <ArrowUturnLeftIcon className="h-5 w-5 text-white" aria-hidden="true" />
             <span className="px-3 h-5 text-white">Undo</span>
           </button>
