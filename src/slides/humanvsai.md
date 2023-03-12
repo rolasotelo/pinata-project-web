@@ -1,7 +1,7 @@
 ---
 title: 'Have we already lost the war?'
-question: 'Can you draw anything from Mexican history?'
-question_es: '¿Puedes dibujar algo de la historia de México?'
+question: 'No rules on this one. Just draw something.'
+question_es: 'No hay reglas esta vez. Sólo dibuja algo.'
 question_cz: 'Dokážete načerpat něco z mexické historie?'
 form: 'canvas'
 date: '2023-02-10'
@@ -11,6 +11,16 @@ drawing_url: ''
 drawing_alt: ''
 ---
 
-# Body for humanvsai.md
+# Humans 🧟‍♀️ vs AI 🤖
 
-BRRAAIINNSSS!
+#### Are we lazy if we use AI?
+
+#### Should I use AI to do my homework?
+
+#### Did you feel like an artist?
+
+#### Who is the real author of the images?
+
+#### What is the future of art?
+
+#### is AI a threat to humanity?

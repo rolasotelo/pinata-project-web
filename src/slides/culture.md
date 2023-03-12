@@ -70,7 +70,7 @@ There is disagreement about the origin of the word Mariachi, but some music hist
 A mariachi orchestra is composed of at least two violins, two trumpets, a Spanish guitar, and two other types of guitars, the vihuela, and guitarron.
 
 <div className="flex justify-center mx-50">
-<iframe width="50%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/276145987&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="50%" height="450" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/276145987&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 </div>
 
 No matter where you go you can always find a mariachi band. And Prague is no exception.

@@ -1,7 +1,7 @@
 ---
-title: "Is Mexico's biggest crime to put pineapple on pizza?"
-question: 'Can you draw anything from Mexican history?'
-question_es: '¿Puedes dibujar algo de la historia de México?'
+title: "Is Mexico's biggest crime to put pineapple on pizza 🍍?"
+question: 'Have you ever tried a mexican meal?'
+question_es: '¿Puedes dibujar algún platillo mexicano?'
 question_cz: 'Dokážete načerpat něco z mexické historie?'
 form: 'canvas'
 date: '2023-02-10'
@@ -11,6 +11,52 @@ drawing_url: 'https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/s
 drawing_alt: 'drawn bear eating tacos'
 ---
 
-# Body for food.md
+# Mexican Food or a tale of Corn 🌽 and Beans 🫘
 
-unos taquitos?
+The milpa is a traditional agricultural system of Mesoamerica, in which successive cycles of crops are grown in the same field. The milpa is a combination of **corn, beans, chilli, squash**, and other crops.
+
+Milpa is at the center of Mexican diet and plates. And **corn is the most important crop** in the milpa.
+
+![milpa](https://rolasotelo-portfolio.s3.amazonaws.com/cuatro_fantasticos_milpa.jpg)
+<span className="text-sm">By [Divulgación-CIMMYT](https://idp.cimmyt.org/los-cuatro-fantasticos-de-la-milpa/)</span>
+
+#### But What do mexicans do with corn?
+
+I mean it's not like they use it for every single meal. Right?
+
+Well, they do 🤪
+
+## Tacos and other meals with Vitamin T
+
+Eating with your hands is part of all these mexican dishes. And street food is a big thing back home.
+
+#### Tacos, Tostadas, Tlacoyos, Tlayudas, Tamales
+
+![tacos](https://rolasotelo-portfolio.s3.amazonaws.com/tacos.png)
+<span className="text-sm">Mexican Street Tacos - Photo credit: Chungah Rhee</span>
+
+![tostadas](https://rolasotelo-portfolio.s3.amazonaws.com/tostadas-mexicanas.jpg)
+<span className="text-sm">Tostadas - Photo credit: David Bosé Estrada</span>
+
+![tlacoyos](https://rolasotelo-portfolio.s3.amazonaws.com/tlacoyos.png)
+<span className="text-sm">Tlacoyo - Photo credit: not mine</span>
+
+## My favorite: Chiles en Nogada
+
+The favorite dish of my girlfriend and also mine. It's a dish from Puebla, Mexico. It's a poblano chile stuffed with a lot of stuff. It's topped with pomegranate seeds and parsley.
+
+![chiles en nogada](https://rolasotelo-portfolio.s3.amazonaws.com/cennogada.png)
+<span className="text-sm">Chile en Nogada - Photo credit: cucharamia</span>
+
+## Tex-Mex or Mexican-American cuisine
+
+Maybe you are more familiar with Tex-Mex or Mexican-American cuisine. It's a fusion of Mexican and American cuisine. But not very popular in Mexico.
+
+* ・**Burritos** 🌯 are the flagship dish of Tex-Mex cuisine. I also love them.
+* ・**Nachos** are also a staple of Tex-Mex cuisine.
+* ・**Chimichangas** are a deep-fried burrito, never tried them.
+* ・**Hard shelled tacos** 🌮 are a popular dish in the United States, but not in Mexico.
+
+### Did you know chocolate, vanilla, pineapple (no it's not Hawaiian), and tomatoes are all native to Mexico?
+
+So if we invented tomatoes sauce, are we on our right to put pineapple on pizza?
