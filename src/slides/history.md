@@ -2,7 +2,7 @@
 title: 'Is Mexico to blame for the extinction of the dinosaurs 🦖?'
 question: 'Can you draw anything from Mexico?'
 question_es: '¿Puedes dibujar algo proveniente de México?'
-question_cz: 'Dokážete načerpat něco z mexické historie?'
+question_cz: 'Dokážete nakreslit něco, co pochází z Mexika?'
 form: 'canvas'
 date: '2023-02-10'
 image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/dinosaur.png'
@@ -11,7 +11,7 @@ drawing_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/dinosaur-lines.png'
 drawing_alt: 'drawn dinosaur and meteorite'
 ---
 
-# A very Brief History of Mexico 🦕
+# A very brief history of Mexico 🦕
 
 I'll try not to bore you
 
@@ -21,15 +21,15 @@ The first notable thing taking place in Mexico was the strike of a meteorite tha
 
 ![chicxulub](https://rolasotelo-portfolio.s3.amazonaws.com/Chicxulubcrater.jpg)
 
-### I discovered something cool when writing 'chicxulub crater' on google. Try it yourself.
+### I discovered something cool when writing 'chicxulub crater' on google. Try it yourselves.
 
 ## First civilizations
 
-Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexica people around 1325 C.E. According to legend, Huitzilopochtli directed them to build where they saw an eagle perched on a cactus, eating a snake.
+Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexica people around 1325. According to legend, Huitzilopochtli directed them to build where they saw an eagle perched on a cactus, eating a snake.
 
 ![Tenochtitlan](https://rolasotelo-portfolio.s3.amazonaws.com/tenochtitlan.jpg)
 
-### Now you can understand better the national coat of arms of Mexico at the center of the flag.
+### Now, you can understand better the national coat of arms of Mexico at the center of the flag.
 
 #### What about the Mayans?
 
@@ -53,8 +53,8 @@ It comprised Mexico, Central America, much of the Southwestern and Central Unite
 
 ## Czech and Mexican history
 
-* ・A czech was the first to discover California was not an island
-* ・A czech was the first to learn Seri language
+* ・The first foreigner who discovered that California was not an island was a Czech person
+* ・The first foreigner to learn the Seri language was a Czech person
 
 ![Seri](https://rolasotelo-portfolio.s3.amazonaws.com/seri-woman.jpg)
 

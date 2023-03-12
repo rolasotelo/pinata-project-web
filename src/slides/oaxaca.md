@@ -2,7 +2,7 @@
 title: "Why do Mexicans pronounce letter 'x' like that 👽?"
 question: 'What is your favorite thing about your country?'
 question_es: '¿Qué te gusta más de tu país?'
-question_cz: 'Dokážete načerpat něco z mexické historie?'
+question_cz: 'Co máš na své zemi nejraději?'
 form: 'text'
 date: '2023-02-10'
 image_url: ''

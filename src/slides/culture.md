@@ -1,8 +1,8 @@
 ---
-title: 'Are Pinatas the only culture mexicans have? 🪅'
-question: 'Can you draw a pinata?'
+title: 'Are Piñatas the only culture Mexicans have? 🪅'
+question: 'Can you draw a piñata?'
 question_es: 'Dibuja una piñata.'
-question_cz: 'Dokážete načerpat něco z mexické historie?'
+question_cz: 'Dokážete nakreslit piňátu?'
 form: 'canvas'
 date: '2023-02-10'
 image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/pinata-giraffe.png'
@@ -23,9 +23,9 @@ The origin of pinatas in Mexico go back to  1586. They were originally created f
 
 ![pinata](https://rolasotelo-portfolio.s3.amazonaws.com/pinatas.jpg)
 
-### Have you ever before hit a pinata?
+### Have you ever hit a piñata before?
 
-## Dia de Muertos
+## Día de Muertos
 
 It has its origin in the cult to the dead, which was practiced by indigenous people. It is celebrated on November 1st and 2nd.
 
@@ -33,11 +33,11 @@ It has its origin in the cult to the dead, which was practiced by indigenous peo
 
 Image by <a href="https://www.freepik.com/free-vector/hand-drawn-flat-dia-de-muertos-family-home-altar-illustration_19336556.htm?epik=dj0yJnU9ZDNyaFZlWTJMOFZJZ3RMaGhWNUpvLVhMMTFRVHlocE8mcD0wJm49LTBUa2RFTlpTWExZSUswaElodEhuZyZ0PUFBQUFBR1FOejMw">Freepik</a>
 
-### Did you watch Coco from Disney?
+### Have you watched Coco by Disney?
 
 ## Frida Kahlo and Diego Rivera
 
-Probably the most famous Mexican artists. They were married.
+Probably the most famous Mexican artists. They were married to each other.
 
 ![la pinata diego](https://rolasotelo-portfolio.s3.amazonaws.com/pinata-diego.jpg)
 La Pinata by Diego Rivera
@@ -62,7 +62,7 @@ Entonces vimos a la hija del minotauro by Leonora Carrington
 
 ## Mariachi
 
-There is disagreement about the origin of the word Mariachi, but some music historians believe that it is derived from the French word mariage, meaning "wedding,".
+There is disagreement about the origin of the word Mariachi, but some music historians believe that it is derived from the French word mariage, meaning "wedding".
 
 ![mariachi](https://rolasotelo-portfolio.s3.amazonaws.com/mariachi.png)
 <span className="text-sm">Blend Images - Jeremy Woodhouse/Brand X Pictues/Getty Images</span>

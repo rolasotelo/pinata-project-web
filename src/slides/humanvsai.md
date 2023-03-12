@@ -1,8 +1,8 @@
 ---
-title: 'Have we already lost the war?'
+title: 'First teachers and now AI tells us what to do? 🫠'
 question: 'No rules on this one. Just draw something.'
 question_es: 'No hay reglas esta vez. Sólo dibuja algo.'
-question_cz: 'Dokážete načerpat něco z mexické historie?'
+question_cz: 'Tentokrát bez pravidel, nakresli cokoli.'
 form: 'canvas'
 date: '2023-02-10'
 image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/robot_war.png'
@@ -23,7 +23,7 @@ drawing_alt: 'robot war drawing'
 
 #### What is the future of art?
 
-#### is AI a threat to humanity?
+#### Is AI a threat to humanity?
 
 There are several reasons why humans should be concerned about the potential of AI:
 

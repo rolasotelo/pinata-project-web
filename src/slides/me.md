@@ -1,6 +1,6 @@
 ---
 title: 'Who am I 🥷🏽?'
-question: 'How Are you Feeling Today?'
+question: 'How are you feeling today?'
 question_es: '¿Cómo te sientes hoy?'
 question_cz: 'Jak se dnes cítíš?'
 form: 'text'
@@ -13,13 +13,13 @@ drawing_alt: ''
 
 # *Hola a todos 👋🏾* My name is Rolando Sotelo 🇲🇽
 
-I live in **Prague, Czech Republic 🇨🇿** since september 2022. More specifically I live in Kyje with my beautiful girlfriend **Gabriela** and her family.
+I live in **Prague, Czech Republic 🇨🇿** since September 2022. More specifically I live in Kyje with my beautiful girlfriend **Gabriela** and her family.
 
 ![me and gabi](https://rolasotelo-portfolio.s3.amazonaws.com/gabi-rola-22.jpg)
 
 #### My favorite things from the Czech Republic 🇨🇿 so far are...
 
-* **・My czech family** 👨‍👩‍👧‍👦
+* **・My Czech family** 👨‍👩‍👧‍👦
 * **・Prague Castle** 🏰 and **Charles Bridge** 🌉
 * **・Vegan food** 🌱
 * **・Snow** ❄️
@@ -28,21 +28,21 @@ I live in **Prague, Czech Republic 🇨🇿** since september 2022. More specifi
 
 ## A little more about me
 
-I'm a Cloud Engineer. I like to program stuff in my computer and I like to play boardgames with my girlfriend and friends.
+I'm a Cloud Engineer. I like to program in my computer and I like to play boardgames with my girlfriend and friends.
 
-#### Cloud Engineer ☁️ 👷🏾‍♂️?, what does that mean?
+#### Cloud Engineer ☁️ 👷🏾‍♂️? What does it mean?
 
 ![cloud engineer](https://rolasotelo-portfolio.s3.amazonaws.com/cloud_engineer.png)
 
-I know how to manage computers running somewhere in the world. I know how to make them work together and create sites and apps that people can use, like this one. I created this site for you.
+I know how to manage computers running somewhere in the world. I know how to make them work together and create sites and apps that people can use, like this site that I created for you.
 
-Lately I've been having a lot of fun with AI. Generating images (like the one above), text and sounds.
+Lately, I've been having a lot of fun with AI. Generating images (like the one above), text, and sounds.
 
-### Have you used any AI 🤖 related app lately?
+### Have you used any AI ?? related app lately?
 
 ---
 
-## A few words about AI
+## A few words about AI (Artificial Intelligence, Inteligencia Artificial, Umělá inteligence)
 
 *AI can be so smart and keen<br/> 
 It can even make pictures from a scene<br/>

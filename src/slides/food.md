@@ -2,7 +2,7 @@
 title: "Is Mexico's biggest crime to put pineapple on pizza 🍍?"
 question: 'Have you ever tried a mexican meal?'
 question_es: '¿Puedes dibujar algún platillo mexicano?'
-question_cz: 'Dokážete načerpat něco z mexické historie?'
+question_cz: 'Už jste ochutnali něco z mexické kuchyně?'
 form: 'canvas'
 date: '2023-02-10'
 image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/bear_taco.png'
@@ -11,7 +11,7 @@ drawing_url: 'https://upcdn.io/W142hep/raw/uploads/pinata-web/0.1.0/2023-03-10/s
 drawing_alt: 'drawn bear eating tacos'
 ---
 
-# Mexican Food or a tale of Corn 🌽 and Beans 🫘
+# Mexican food or a tale of corn 🌽 and beans 🫘
 
 The milpa is a traditional agricultural system of Mesoamerica, in which successive cycles of crops are grown in the same field. The milpa is a combination of **corn, beans, chilli, squash**, and other crops.
 
@@ -20,9 +20,9 @@ Milpa is at the center of Mexican diet and plates. And **corn is the most import
 ![milpa](https://rolasotelo-portfolio.s3.amazonaws.com/cuatro_fantasticos_milpa.jpg)
 <span className="text-sm">By [Divulgación-CIMMYT](https://idp.cimmyt.org/los-cuatro-fantasticos-de-la-milpa/)</span>
 
-#### But What do mexicans do with corn?
+#### But what do Mexicans do with corn?
 
-I mean it's not like they use it for every single meal. Right?
+I mean, it's not like they use it for every single meal. Right?
 
 Well, they do 🤪
 
@@ -54,9 +54,9 @@ Maybe you are more familiar with Tex-Mex or Mexican-American cuisine. It's a fus
 
 * ・**Burritos** 🌯 are the flagship dish of Tex-Mex cuisine. I also love them.
 * ・**Nachos** are also a staple of Tex-Mex cuisine.
-* ・**Chimichangas** are a deep-fried burrito, never tried them.
+* ・**Chimichangas** are a deep-fried burrito, I have never tried them.
 * ・**Hard shelled tacos** 🌮 are a popular dish in the United States, but not in Mexico.
 
 ### Did you know chocolate, vanilla, pineapple (no it's not Hawaiian), and tomatoes are all native to Mexico?
 
-So if we invented tomatoes sauce, are we on our right to put pineapple on pizza?
+So if we invented tomato sauce, are we on our right to put pineapple on pizza?
