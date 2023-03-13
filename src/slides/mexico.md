@@ -22,7 +22,7 @@ It is located in the **North/Central part of America**. It is bordered by the Un
 ![map](https://rolasotelo-portfolio.s3.amazonaws.com/Czech_Republic_Mexico_Locator.png)
 
 #### United Mexican States 🇲🇽
-United Mexican States is the official name of the country. But I don't like it. I prefer Mexico. I think most Mexicans prefer Mexico.
+United Mexican States is the official name of the country. But I don't like it. **I prefer Mexico**. I think most Mexicans prefer Mexico.
 
 #### Some facts and numbers about Mexico 📊
 * ・We are organized in 32 states 🗺️

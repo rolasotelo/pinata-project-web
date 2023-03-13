@@ -17,7 +17,7 @@ I'll try not to bore you
 
 ## The meteorite
 
-The first notable thing taking place in Mexico was the strike of a meteorite that caused a mass extinction of the dinosaurs. The meteorite was named Chicxulub. The crater is the largest impact crater in the world and is located in the Yucatan Peninsula.
+The first notable thing taking place in Mexico was the strike of a meteorite that caused a **mass extinction of the dinosaurs**. The meteorite was **named Chicxulub**. The crater is the largest impact crater in the world and is located in the Yucatan Peninsula.
 
 ![chicxulub](https://rolasotelo-portfolio.s3.amazonaws.com/Chicxulubcrater.jpg)
 
@@ -25,7 +25,7 @@ The first notable thing taking place in Mexico was the strike of a meteorite tha
 
 ## First civilizations
 
-Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexica people around 1325. According to legend, Huitzilopochtli directed them to build where they saw an eagle perched on a cactus, eating a snake.
+Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexica people around 1325. According to legend, **Huitzilopochtli** directed them to **build where they saw an eagle perched on a cactus, eating a snake**.
 
 ![Tenochtitlan](https://rolasotelo-portfolio.s3.amazonaws.com/tenochtitlan.jpg)
 
@@ -37,11 +37,11 @@ Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexic
 
 ## The New Spain
 
-New Spain was a colonial territory of the Spanish Empire. It was established following the Spanish conquest of the Aztec Empire in 1521.
+New Spain was a colonial territory of the **Spanish Empire**. It was established following the Spanish conquest of the Aztec Empire in 1521.
 
 ![New Spain](https://rolasotelo-portfolio.s3.amazonaws.com/virreinato.jpg)
 
-It comprised Mexico, Central America, much of the Southwestern and Central United States, and Spanish Florida as well as the Philippines, Guam, Mariana and Caroline Islands.
+It comprised **Mexico, Central America, much of the Southwestern and Central United States, and Spanish Florida as well as the Philippines, Guam, Mariana and Caroline Islands**.
 
 ## Independent Mexico
 
@@ -53,8 +53,8 @@ It comprised Mexico, Central America, much of the Southwestern and Central Unite
 
 ## Czech and Mexican history
 
-* ・The first foreigner who discovered that California was not an island was a Czech person
-* ・The first foreigner to learn the Seri language was a Czech person
+* ・The first foreigner who discovered that **California was not an island** was a Czech person
+* ・The first foreigner to **learn the Seri language** was a Czech person
 
 ![Seri](https://rolasotelo-portfolio.s3.amazonaws.com/seri-woman.jpg)
 

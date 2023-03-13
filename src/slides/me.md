@@ -28,17 +28,17 @@ I live in **Prague, Czech Republic 🇨🇿** since September 2022. More specifi
 
 ## A little more about me
 
-I'm a Cloud Engineer. I like to program in my computer and I like to play boardgames with my girlfriend and friends.
+I'm a **Cloud Engineer**. I like to program in my computer and I like to play boardgames with my girlfriend and friends.
 
 #### Cloud Engineer ☁️ 👷🏾‍♂️? What does it mean?
 
 ![cloud engineer](https://rolasotelo-portfolio.s3.amazonaws.com/cloud_engineer.png)
 
-I know how to manage computers running somewhere in the world. I know how to make them work together and create sites and apps that people can use, like this site that I created for you.
+I know how to **manage computers** running somewhere in the world. I know how to make them work together and **create sites** and apps that people can use, like this site that I created for you.
 
 Lately, I've been having a lot of fun with AI. Generating images (like the one above), text, and sounds.
 
-### Have you used any AI ?? related app lately?
+### Have you used any AI 👾 related app lately?
 
 ---
 
