@@ -11,7 +11,7 @@ export default function ChatsWall({chats}: Props) {
                 <div
                     className="my-4 grid grid-cols-1 gap-y-4 gap-x-4 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-2">
                     {chats.map((chat) => {
-                        return (<div className="flex flex-col bg-white p-2 rounded-2xl"><h1 className="text-2xl">{chat.prompt}</h1><br/><p key={chat.response}>{chat.response}</p></div>)
+                        return (<div key={chat.prompt} className="flex flex-col bg-white p-2 rounded-2xl"><h1 className="text-2xl">{chat.prompt}</h1><br/><p key={chat.prompt}>{chat.response}</p></div>)
                     })}
                 </div>
             </div>
