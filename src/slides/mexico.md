@@ -3,12 +3,12 @@ title: 'Is Mexico real 🤡?'
 question: 'What do you know about Mexico?'
 question_es: '¿Qué sabes de México?'
 question_cz: 'Co víš o Mexiku?'
-form: 'text'
+form: 'canvas'
 date: '2023-02-10'
-image_url: ''
-image_alt: ''
-drawing_url: ''
-drawing_alt: ''
+image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/dinosaur.png'
+image_alt: 'dinosaur and meteorite'
+drawing_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/dinosaur-lines.png'
+drawing_alt: 'drawn dinosaur and meteorite'
 ---
 
 # Yes, Mexico is real 🤣

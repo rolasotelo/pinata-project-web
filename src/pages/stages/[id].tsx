@@ -5,6 +5,7 @@ import {getSlideData} from "@/lib/getSlides";
 import {renderMarkdown} from "@/lib/renderMarkdown";
 import {MDXRemote} from "next-mdx-remote";
 import {BookOpenIcon, LightBulbIcon} from '@heroicons/react/20/solid'
+import TextToTextForm from "@/components/TextToTextForm";
 
 function SlideDivider() {
     return (
@@ -66,9 +67,12 @@ export default function Stage({stageData, html}) {
         <>
             <h1 className="text-3xl font-bold text-center">{stageData.title}</h1>
             <QuestionDivider/>
-            {stageData.form !== 'canvas' &&
+            {stageData.form === 'text' &&
                 <TextToImageForm question={stageData.question} question_es={stageData.question_es}
                                  question_cz={stageData.question_cz}>{slides}</TextToImageForm>}
+            {stageData.form === 'question' &&
+                <TextToTextForm question={stageData.question} question_es={stageData.question_es}
+                                 question_cz={stageData.question_cz}>{slides}</TextToTextForm>}
             {stageData.form === 'canvas' &&
                 <ImageAndTextToImageForm question={stageData.question} question_es={stageData.question_es}
                                          question_cz={stageData.question_cz} image_url={stageData.image_url}

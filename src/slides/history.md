@@ -1,9 +1,9 @@
 ---
 title: 'Is Mexico to blame for the extinction of the dinosaurs 🦖?'
-question: 'Can you draw anything from Mexico?'
-question_es: '¿Puedes dibujar algo proveniente de México?'
-question_cz: 'Dokážete nakreslit něco, co pochází z Mexika?'
-form: 'canvas'
+question: 'Make Huitzilopochtli a question'
+question_es: 'Pregunta a Huitzilopochtli'
+question_cz: 'Huitzilopochtli?'
+form: 'question'
 date: '2023-02-10'
 image_url: 'https://rolasotelo-portfolio.s3.amazonaws.com/dinosaur.png'
 image_alt: 'dinosaur and meteorite'
