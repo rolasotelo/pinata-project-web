@@ -15,15 +15,27 @@ drawing_alt: 'robot war drawing'
 
 #### Are we lazy if we use AI?
 
-#### Should I use AI to do my homework?
-
 #### Did you feel like an artist?
 
 #### Who is the real author of the images?
 
+#### Should I use AI to do my homework?
+
+#### Where is the real value of AI?
+
+#### Can AI really make the world a better place?
+
+#### Is it ok if I don't know how AI works and just use it?
+
 #### What is the future of art?
 
+#### Who should make rules for AI?
+
 #### Is AI a threat to humanity?
+
+---
+
+## I asked AI to tell me what should we be worried about, regarding AI
 
 There are several reasons why humans should be concerned about the potential of AI:
 
@@ -35,4 +47,4 @@ There are several reasons why humans should be concerned about the potential of 
 
 While AI has the potential to bring many benefits to society, it is important to approach its development and deployment with caution and consideration for its potential risks and impacts.
 
-### Thank you all for listening 🤙🏾
+### Thank you all for listening and I hope you had fun 🤙🏾

@@ -52,7 +52,7 @@ export default function Stage({stageData, html}) {
                                className="text-2xl font-bold text-gray-800 text-center py-3 bg-gray-100 rounded-2xl mx-40"/>,
             h3: (props) => <h1 {...props} className="text-xl font-bold text-pink-800 text-center py-3"/>,
             h4: (props) => <h1 {...props} className="text-2xl font-bold text-center py-2"/>,
-            p: (props) => <p {...props} className="text-xl text-center py-4 mx-40"/>,
+            p: (props) => <p {...props} className="text-2xl text-center py-4 mx-40"/>,
             img: (props) => {
                 return (
                     <img {...props} className="w-7/12 mx-auto"/>

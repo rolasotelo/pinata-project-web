@@ -1,6 +1,6 @@
 ---
 title: 'Are Piñatas the only culture Mexicans have? 🪅'
-question: 'Can you draw a piñata?'
+question: 'Can you draw a pinata?'
 question_es: 'Dibuja una piñata.'
 question_cz: 'Dokážete nakreslit piňátu?'
 form: 'canvas'

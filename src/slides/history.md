@@ -23,17 +23,23 @@ The first notable thing taking place in Mexico was the strike of a meteorite tha
 
 ### I discovered something cool when writing 'chicxulub crater' on google. Try it yourselves.
 
+---
+
 ## First civilizations
 
 Tenochtitlan, the capital of the Aztec Empire, was founded by the Aztec or Mexica people around 1325. According to legend, **Huitzilopochtli** directed them to **build where they saw an eagle perched on a cactus, eating a snake**.
 
 ![Tenochtitlan](https://rolasotelo-portfolio.s3.amazonaws.com/tenochtitlan.jpg)
 
+<a href="https://www.gob.mx/cms/uploads/article/main_image/59059/banderasMexico-08.jpg" target="_blank">
 ### Now, you can understand better the national coat of arms of Mexico at the center of the flag.
+</a>
 
 #### What about the Mayans?
 
 ![Mayan](https://rolasotelo-portfolio.s3.amazonaws.com/MundoMaya-Pamphlet.jpg)
+
+---
 
 ## The New Spain
 
@@ -51,14 +57,18 @@ It comprised **Mexico, Central America, much of the Southwestern and Central Uni
 * ・Maximilian of Habsburg empire
 * ・Revolution of 1910 and civil war
 
+---
+
 ## Czech and Mexican history
 
-* ・The first foreigner who discovered that **California was not an island** was a Czech person
+* ・**Václav Linck** sought on his expeditions to connect the California peninsula (Not an island).
 * ・The first foreigner to **learn the Seri language** was a Czech person
 
 ![Seri](https://rolasotelo-portfolio.s3.amazonaws.com/seri-woman.jpg)
 
 * ・In May 2022, the Czech Republic and Mexico celebrated 100 years of the establishment of diplomatic relations. 🇨🇿 💜 🇲🇽
 
+![Masaryk stree](https://rolasotelo-portfolio.s3.amazonaws.com/masaryk-street.png)
+<span className="text-sm">Avenida Presidente Masaryk CDMX - Source: leisureandlux.mx</span>
 
 ### Let's see what you draw about Mexico. I'm curious.
